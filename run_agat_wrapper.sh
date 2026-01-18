@@ -2,12 +2,12 @@
 set -euo pipefail
 
 # Directories
-GENOME_DIR="/vol/data2/cucurbitaceae/data/busco/data/genome"
-GFF_DIR="/vol/data2/cucurbitaceae/data/busco/data/gff3"
-CDS_DIR="/vol/data2/cucurbitaceae/data/busco/data/cds"
-SINGLEISO_GFF_DIR="/vol/data2/cucurbitaceae/data/busco/data/singleiso_gff"
-SINGLEISO_CDS_DIR="/vol/data2/cucurbitaceae/data/busco/data/singleiso_cds"
-LOG_DIR="/vol/data2/cucurbitaceae/data/busco/data/logs"
+GENOME_DIR="/path/to/genome/directory/"
+GFF_DIR="/path/to/gff3/directory/"
+CDS_DIR="/path/to/output/cds/directory/"
+SINGLEISO_GFF_DIR="/path/to/output/singleiso_gff/directory/"
+SINGLEISO_CDS_DIR="/path/to/output/singleiso_cds/directory/"
+LOG_DIR="/path/to/output/logs/directory/"
 
 # Make sure output dirs exist
 mkdir -p "$CDS_DIR" "$SINGLEISO_GFF_DIR" "$SINGLEISO_CDS_DIR" "$LOG_DIR"
