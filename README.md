@@ -120,8 +120,11 @@ This is an interactive Python script that prompts the user to provide the input 
 ### 3) Plotting pigment biosynthesis gene expression
 
 For this, two approaches were used: 
+
 (a) plotting the expression of each key pathway gene (flavonoid and carotenoid) per species, and 
-(b) plotting the combined expression of each key gene per lineage (Cucurbitaceae vs outgroups).
+
+(b) plotting the combined expression of each key gene per lineage (Cucurbitaceae vs outgroups)
+
 For species-level plots, **expression_violin_plot_per_species.py** was used (separately for flavonoid and carotenoid genes). For lineage-level plots, **expression_violin_plot_per_lineage.py** was used. The four resulting plots were manually combined using Inkscape. 
 
 These scripts are specific to the species and gene candidates used in the study. To reuse them, users should modify the species and gene candidates lists within the scripts accordingly. 
