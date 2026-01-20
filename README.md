@@ -11,10 +11,10 @@ https://doi.org/10.1101/2025.10.06.680802
 - matplotlib
 - scipy
 - numpy
-- KIPEs3
-- AGAT
-- Kraken
-- Bracken
+- [KIPEs3](https://github.com/bpucker/KIPEs)
+- [AGAT](https://github.com/NBISweden/AGAT)
+- [Kraken](https://github.com/DerrickWood/kraken)
+- [Bracken](https://github.com/jenniferlu717/Bracken)
 
 ---
 
@@ -40,7 +40,7 @@ _*Note: The base names of the genome FASTA and corresponding GFF3 files must mat
 
 ---
 
-### 2) Translating coding sequences into polypeptide sequence
+### 2) Translating coding sequences into polypeptide sequences
 
 The script **transeq.py**, available [here](https://github.com/bpucker/PBBtools/tree/main/transeq), was used to translate all coding sequences into polypeptide sequences.
 
