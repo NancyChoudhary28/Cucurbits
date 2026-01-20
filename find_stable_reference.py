@@ -6,7 +6,7 @@ import numpy as np
 # Set seaborn style
 sns.set(style="whitegrid")
 
-# Adjusting the species names to match your desired formatting
+# Adjusting the species names
 def format_species_name(species):
     # Replace underscores with spaces and ensure correct formatting for genus and species
     species = species.replace("_", " ")
@@ -15,7 +15,7 @@ def format_species_name(species):
         species = f"{species_parts[0]} {species_parts[1]}"
     return species
 
-# Your reference genes
+# Reference genes
 genes_of_interest = [
     'Helicase', 'RHIP1', 'UPL7',
     'F-Box', 'AP2M', 'YLS8', 'PP2AA3','EXPRS', 'MON1', 
@@ -77,12 +77,10 @@ gene_colors = dict(zip(top_10_genes, palette))
 # ---- PLOTTING ----
 sns.set(style="whitegrid")
 
-# Create figure with GridSpec: 4×5 cells, last column reserved for legend
 fig = plt.figure(figsize=(24, 20))
 gs = fig.add_gridspec(4, 5, width_ratios=[1,1,1,1,0.3], wspace=0.3, hspace=0.4)
 
 nrows, ncols = 8, 2
-# Flattened list of the 16 plotting axes
 fig, axes = plt.subplots(
     nrows=nrows, ncols=ncols, figsize=(16, 23), sharey='row'
 )
@@ -93,9 +91,7 @@ plt.subplots_adjust(
     top=0.95,
     bottom=0.18   # space for figure label + caption
 )
-#axes = [fig.add_subplot(gs[i, j]) for i in range(4) for j in range(4)]
 
-# Flatten axes for easy iteration
 flat_axes = axes.flatten()
 
 for ax, (species, df) in zip(flat_axes, species_summed_tpms.items()):
@@ -132,7 +128,6 @@ for ax, (species, df) in zip(flat_axes, species_summed_tpms.items()):
     ax.grid(axis='x', visible=False)
     ax.axhline(1, color='black', linestyle='--', linewidth=2)
 
-# remove any extra axes (if fewer than 16 species)
 for extra_ax in flat_axes[len(species_summed_tpms):]:
     fig.delaxes(extra_ax)
 
@@ -142,8 +137,7 @@ from matplotlib.lines import Line2D
 handles = [Line2D([], [], color=col, lw=3) for gene, col in gene_colors.items()]
 labels = list(gene_colors.keys())
 
-# Create separate axis for the legend (x0, y0, width, height)
-legend_ax = fig.add_axes([0.82, 0.2, 0.16,0.55])  # Adjust position as needed
+legend_ax = fig.add_axes([0.82, 0.2, 0.16,0.55]) 
 legend_ax.axis('off')
 legend_ax.legend(
     handles, labels, loc='center left', fontsize=11, frameon=True, handlelength=2.5, borderpad=0.8,labelspacing=0.8)
