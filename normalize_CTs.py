@@ -8,7 +8,7 @@ reference_genes = [
     'His3.3', 'AT5G12240', 'MON1', 'F-Box', 'UPL7'
 ]
 
-# Get input and output folders from user
+# Get input and output folders
 input_folder = input("Enter path to input folder containing TPM tables: ").strip()
 output_folder = input("Enter path to output folder for normalized tables: ").strip()
 
@@ -16,7 +16,7 @@ output_folder = input("Enter path to output folder for normalized tables: ").str
 os.makedirs(output_folder, exist_ok=True)
 
 # Process each species table
-for file_path in Path(input_folder).glob("*.txt"):  # Assuming tables are CSVs
+for file_path in Path(input_folder).glob("*.txt"):  
     print(f"Processing: {file_path.name}")
     
     # Read the count table
