@@ -71,7 +71,7 @@ _*Note: Please update the input and output directory paths in the wrapper script
 
 ### 5) Collecting candidate flavonoid biosynthesis genes for phylogenetic analysis
 
-The script **collect_KIPEs_sequence.py** was used to extract candidate flavonoid biosynthesis gene sequences from KIPEs results for phylogenetic tree construction.
+The script **collect_KIPEs_sequence.py** was used to extract candidate polypeptide sequences of the flavonoid biosynthesis genes from KIPEs results for phylogenetic tree construction.
   ```
    Usage
    python3 collect_KIPEs_sequence.py
