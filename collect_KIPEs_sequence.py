@@ -85,7 +85,7 @@ def process_kipes_results(main_dir, enzymes, output_file, threshold):
                                     out_fh.write(line)
 
     print(f"Concatenation completed. Results saved to {output_file}")
-    # Print skipped sequences (duplicates) for debugging
+    # Print skipped sequences (duplicates)
     if skipped_sequences:
         print("\nDuplicate sequences found in the following subdirectories:")
         for seq_id, sub_dirs in skipped_sequences.items():
