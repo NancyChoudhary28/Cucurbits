@@ -36,10 +36,10 @@ def process_kipes_results(kipes_dir, input_file, output_file, target_gene):
                     base_gene_name = gene.split('_')[0]
 
                     if base_gene_name == target_gene and seq_id == gene_id:
-                        conserved_residues = float(conserved_residues)  # Convert to float for calculation
+                        conserved_residues = float(conserved_residues)  
                         diff_value = 100 - conserved_residues
                         outfile.write(f"{original_id},{conserved_residues}\n")
-                        break  # No need to check further for this gene
+                        break  
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Extract conserved residue information from KIPEs summary files.")
