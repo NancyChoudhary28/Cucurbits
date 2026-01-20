@@ -357,7 +357,7 @@ for i, gene in enumerate(gene_list):
         dodge=False,
         width=0.1,
         linewidth=0.5,
-        fliersize=0,  # hide outliers if desired
+        fliersize=0,  
         ax=ax
     )
     ax.set_ylabel("")
