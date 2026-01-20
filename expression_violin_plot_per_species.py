@@ -17,9 +17,8 @@ species_order = [
 species_colors = ['#1f78b4']*9 + ['#d95f02']*8
 
 # Path to input folder
-input_folder = Path("normalized_count_tables/")  # <--- Change if needed
+input_folder = Path("normalized_count_tables/")  
 
-# Mapping: species -> {actual_gene_id: standardized_enzyme_name}
 gene_mapping = {
     'Malus domestica': {
         #'PSY':['MD09G1281300','MD09G1146800','MD17G1133400','MD11G1010500','MD03G1007200'],
@@ -330,7 +329,7 @@ fig, axes = plt.subplots(
     n_genes, 1,
     figsize=(3.5, 1.2 * n_genes),
     sharex=True,
-    gridspec_kw={'hspace': 0.04}  # remove vertical space between subplots
+    gridspec_kw={'hspace': 0.04}  
 )
 plt.subplots_adjust(right=0.8)
 if n_genes == 1:
@@ -420,5 +419,5 @@ axes[-1].set_xticklabels(
 )
 
 plt.tight_layout()
-plt.savefig("carotenoid_violin_plots_per_gene_sum10.svg", dpi=300)
+plt.savefig("carotenoid_violin_plots_per_lineage10.svg", dpi=300)
 plt.show()
