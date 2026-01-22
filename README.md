@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/1068539588.svg)](https://doi.org/10.5281/zenodo.18342364)
+
 #### This repository contains the code used in the article:   
 # [Out of the blue: Family-wide loss of anthocyanin biosynthesis in Cucurbitaceae](https://doi.org/10.1101/2025.10.06.680802)
 https://doi.org/10.1101/2025.10.06.680802
